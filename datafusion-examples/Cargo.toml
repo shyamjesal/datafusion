@@ -54,6 +54,7 @@ base64 = "0.22.1"
 datafusion-expr = { workspace = true }
 datafusion-physical-expr-adapter = { workspace = true }
 datafusion-proto = { workspace = true }
+datafusion-substrait = { workspace = true }
 datafusion-sql = { workspace = true }
 env_logger = { workspace = true }
 futures = { workspace = true }
@@ -76,3 +77,7 @@ uuid = { workspace = true }
 
 [target.'cfg(not(target_os = "windows"))'.dev-dependencies]
 nix = { version = "0.31.1", features = ["fs"] }
+
+[[example]]
+name = "sql2substrait"
+path = "examples/substrait/sql2substrait.rs"

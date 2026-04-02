@@ -2112,6 +2112,7 @@ dependencies = [
  "datafusion-physical-expr-adapter",
  "datafusion-proto",
  "datafusion-sql",
+ "datafusion-substrait",
  "env_logger",
  "futures",
  "insta",
