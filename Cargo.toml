@@ -65,6 +65,7 @@ members = [
     "benchmarks",
     "datafusion/macros",
     "datafusion/doc",
+    "substrait-lambda"
 ]
 exclude = ["dev/depcheck"]
 resolver = "2"
@@ -153,6 +154,7 @@ datafusion-session = { path = "datafusion/session", version = "53.0.0" }
 datafusion-spark = { path = "datafusion/spark", version = "53.0.0" }
 datafusion-sql = { path = "datafusion/sql", version = "53.0.0" }
 datafusion-substrait = { path = "datafusion/substrait", version = "53.0.0" }
+substrait-lambda = {path="substrait-lambda"}
 
 doc-comment = "0.3"
 env_logger = "0.11"
