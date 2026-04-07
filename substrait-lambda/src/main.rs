@@ -58,9 +58,9 @@ async fn main() -> Result<()> {
     let plan: Plan = serde_json::from_slice(&plan_json)?;
     let logical_plan = from_substrait_plan(&ctx.state(), &plan).await?;
     let df = ctx.execute_logical_plan(logical_plan).await?;
-
-    df.write_parquet(&output_location, DataFrameWriteOptions::new(), None)
-        .await?;
+    df.write_csv("/tmp/datafusion.csv",DataFrameWriteOptions::new(),None).await?;
+    // df.write_parquet(&output_location, DataFrameWriteOptions::new(), None)
+    //     .await?;
 
     println!("Wrote Substrait results to {output_location}");
     Ok(())
