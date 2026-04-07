@@ -79,5 +79,9 @@ uuid = { workspace = true }
 nix = { version = "0.31.1", features = ["fs"] }
 
 [[example]]
-name = "sql2substrait"
-path = "examples/substrait/sql2substrait.rs"
+name = "sql2substrait_scan"
+path = "examples/substrait/sql2substrait_scan.rs"
+
+[[example]]
+name = "sql2substrait_join"
+path = "examples/substrait/sql2substrait_join.rs"
